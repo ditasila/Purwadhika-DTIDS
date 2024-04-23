@@ -14,7 +14,7 @@ This project is a simple program based on authentication system implemented in P
    - Clone the project repository from [(https://github.com/ditasila/Purwadhika-DTIDS/)].
    - Ensure Python installed on the system (version 3.11 or higher).
    - Navigate to the project directory in terminal or command prompt.
-   - Run the command: python DTIDS0106_CAPSTONE1_ANNISA_DITASILA.py
+   - Run the command: python `DTIDS0106_CAPSTONE1_ANNISA_DITASILA.py`
 
 
 ## How to Use the Project
