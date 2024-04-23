@@ -517,66 +517,68 @@ def show_accommodations():
         option_sort = input("Enter your choice: ")
         if option_sort.isdigit():
             option_sort = int(option_sort)
-            while True:
-                if option_sort == 1:
-                    sort_choices()
-                    sort_asc_desc = input('choose 1 or 2: ')
-                    if sort_asc_desc.isdigit():
-                        sort_asc_desc = int(sort_asc_desc)
-                        if sort_asc_desc == 1:
-                            sorted_database = sorting(database, "type of accomodation")
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            break
-                        elif sort_asc_desc == 2:
-                            sorted_database = sorting(database, "type of accomodation", reverse=True)
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            break
-                    else:
-                        print('Invalid option, choose a number displayed')
-                elif option_sort == 2:
-                    sort_choices()
-                    sort_asc_desc = input('choose 1 or 2: ')
-                    if sort_asc_desc.isdigit():
-                        sort_asc_desc = int(sort_asc_desc)
-                        if sort_asc_desc == 1:
-                            sorted_database = sorting(database, "location")
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                        elif sort_asc_desc == 2:
-                            sorted_database = sorting(database, "location", reverse=True)
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                elif option_sort == 3:
-                    sort_choices()
-                    sort_asc_desc = input('choose 1 or 2: ')
-                    if sort_asc_desc.isdigit():
-                        sort_asc_desc = int(sort_asc_desc)
-                        if sort_asc_desc == 1:
-                            sorted_database = sorting(database, "price")
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                        elif sort_asc_desc == 2:
-                            sorted_database = sorting(database, "price", reverse=True)
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                elif option_sort == 4:
-                    sort_choices()
-                    sort_asc_desc = input('choose 1 or 2: ')
-                    if sort_asc_desc.isdigit():
-                        sort_asc_desc = int(sort_asc_desc)
-                        if sort_asc_desc == 1:
-                            sorted_database = sorting(database, "availability")
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                        elif sort_asc_desc == 2:
-                            sorted_database = sorting(database, "availability", reverse=True)
-                            print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
-                            return
-                elif option_sort == 5:
-                    return
+            if option_sort == 1:
+                sort_choices()
+                sort_asc_desc = input('choose 1 or 2: ')
+                if sort_asc_desc.isdigit():
+                    sort_asc_desc = int(sort_asc_desc)
+                    if sort_asc_desc == 1:
+                        sorted_database = sorting(database, "type of accomodation")
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        break
+                    elif sort_asc_desc == 2:
+                        sorted_database = sorting(database, "type of accomodation", reverse=True)
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        break
+                else:
+                    print('Invalid option, choose a number displayed')
+            elif option_sort == 2:
+                sort_choices()
+                sort_asc_desc = input('choose 1 or 2: ')
+                if sort_asc_desc.isdigit():
+                    sort_asc_desc = int(sort_asc_desc)
+                    if sort_asc_desc == 1:
+                        sorted_database = sorting(database, "location")
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+                    elif sort_asc_desc == 2:
+                        sorted_database = sorting(database, "location", reverse=True)
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+            elif option_sort == 3:
+                sort_choices()
+                sort_asc_desc = input('choose 1 or 2: ')
+                if sort_asc_desc.isdigit():
+                    sort_asc_desc = int(sort_asc_desc)
+                    if sort_asc_desc == 1:
+                        sorted_database = sorting(database, "price")
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+                    elif sort_asc_desc == 2:
+                        sorted_database = sorting(database, "price", reverse=True)
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+            elif option_sort == 4:
+                sort_choices()
+                sort_asc_desc = input('choose 1 or 2: ')
+                if sort_asc_desc.isdigit():
+                    sort_asc_desc = int(sort_asc_desc)
+                    if sort_asc_desc == 1:
+                        sorted_database = sorting(database, "availability")
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+                    elif sort_asc_desc == 2:
+                        sorted_database = sorting(database, "availability", reverse=True)
+                        print(tabulate(sorted_database, headers=sorted_database.keys(), tablefmt="presto"))
+                        return
+            elif option_sort == 5:
+                return
+            else:
+                print('Invalid option, choose a number displayed')
+                continue
         else:
             print('Invalid option, choose a number displayed')
-            break
+            continue
 
 def print_row_by_index(database, index=None):
     if index != None:
