@@ -6,8 +6,8 @@
 This project is a simple program based on authentication system implemented in Python. It allows users to log in with their username and password, and depending on their account type (admin or user), they are directed to different interfaces. 
 
 
-## Table of content (Flowchart)
-
+## Content of Program (Flowchart)
+<img src="Content_of_Program.png">
 
  
 ## How to Install and Run the Project
@@ -23,7 +23,7 @@ This project is a simple program based on authentication system implemented in P
    - If user are a regular user, they will access the user interface with limited functionalities.
    - After five unsuccessful attempts, the system will lock you out for security reasons.
 
-## Credits
+## Credit
 
 Annisa Ditasila 
 
